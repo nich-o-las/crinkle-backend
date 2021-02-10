@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "pages",
   "info": {
-    "name": "category",
-    "description": ""
+    "name": "page"
   },
   "options": {
     "increments": true,
@@ -11,16 +10,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
-    },
-    "posts": {
-      "via": "category",
-      "collection": "post"
     },
     "slug": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "title"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

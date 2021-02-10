@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_pages",
+  "info": {
+    "name": "articlePage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

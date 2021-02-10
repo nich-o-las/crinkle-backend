@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "posts",
   "info": {
-    "name": "article",
+    "name": "post",
     "description": ""
   },
   "options": {
@@ -24,16 +24,28 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "category": {
       "model": "category",
-      "via": "articles"
+      "via": "posts"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "author": {
+      "via": "posts",
+      "model": "author"
     }
   }
 }
